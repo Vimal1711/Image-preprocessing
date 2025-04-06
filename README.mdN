@@ -1,0 +1,62 @@
+Contrast Limited Adaptive Histogram Equalization (CLAHE) is an image enhancement technique designed to improve contrast and reveal finer image details, which can be especially useful for classification tasks. 
+Unlike global histogram equalization methods, CLAHE operates on small, non-overlapping regions (tiles) of the image, allowing for localized contrast enhancement. To prevent noise from being overly amplified, it limits the degree of contrast enhancement within each tile. 
+This selective processing helps in enhancing important features without distorting the image or introducing artifacts. CLAHE is particularly effective in scenarios where lighting conditions vary across an image, as it enhances only specific areas rather than the entire image uniformly.
+
+✅ Benefits of CLAHE
+Localized Contrast Enhancement
+CLAHE works on small regions (tiles) of the image rather than the entire image, improving contrast specifically where it's needed.
+
+Noise Suppression
+It limits the amplification of contrast to prevent over-enhancement of noise, especially in relatively uniform areas.
+
+Better Feature Visibility
+Enhances hidden or low-contrast features, making it ideal for medical imaging, object detection, and classification tasks.
+
+Robust in Uneven Lighting Conditions
+Since it adjusts contrast locally, it's effective even when lighting varies across different parts of the image.
+
+Customization
+Users can control parameters like tile size and clip limit to fine-tune the effect based on the application.
+
+📌 Key Characteristics
+Tile-Based Processing:
+The image is divided into small, non-overlapping tiles. Each tile is independently processed, then the results are combined using interpolation to avoid edge artifacts.
+
+Clip Limit:
+Controls the maximum contrast enhancement by limiting the height of the histogram. Prevents noise amplification in uniform regions.
+
+Interpolation Between Tiles:
+Ensures a smooth transition between processed regions, avoiding blocky artifacts.
+
+🧠 Applications of CLAHE
+Medical Imaging
+
+Enhances features in X-rays, CT scans, and MRIs.
+
+Helps in detecting abnormalities that might be missed in low-contrast areas.
+
+Surveillance and Security
+
+Improves clarity in poorly lit video footage.
+
+Remote Sensing
+
+Enhances satellite and aerial imagery for better analysis of terrain and land use.
+
+Document Image Processing
+
+Makes faded text more readable in scanned documents.
+
+Facial Recognition and Biometrics
+
+Improves the performance of recognition systems under varying lighting conditions.
+
+⚙️ When to Use CLAHE
+Images with uneven lighting or low contrast
+
+Tasks involving detection, segmentation, or classification
+
+Situations where preserving details is more important than global brightness correction
+
+
+
